@@ -303,7 +303,59 @@ function tarea1Ejercicio6(){
         p2.textContent = meses[i];
     }
 }
-//Aqui falta el 7
+function nota(){
+    event.preventDefault();
+    let input = parseInt(document.getElementById("nota").value);
+    let p = document.getElementById("notaCalc");
+    switch(input){
+        case 0:case 1:case 2: case 3: case 4:
+            p.textContent = "Suspendido";
+            break;
+        case 5:
+            p.textContent = "Suficiente";
+            break;
+        case 6:
+            p.textContent = "Bien";
+            break;
+        case 7:case 8:
+            p.textContent = "Notable";
+            break;
+        case 9:case 10:
+            p.textContent = "Excelente";
+            break;
+        default:
+            p.textContent = "No es una nota válida";
+            break;
+    }
+}
+function tarea1Ejercicio7(){
+    crearArticle();
+    let article = document.querySelector("article");
+    article.setAttribute("class", "ejercicios");
+    let h3 = document.createElement("h3");
+    article.appendChild(h3);
+    h3.textContent = "Tarea 1 Ejercicio 7";
+    let form = document.createElement("form");
+    article.appendChild(form);
+    let p = document.createElement("p");
+    form.appendChild(p);
+    let label = document.createElement("label");
+    label.setAttribute("for", "nota");
+    label.innerText = "Que nota has sacado"
+    p.appendChild(label);
+    let input = document.createElement("input");
+    input.setAttribute("type", "text")
+    input.setAttribute("id","nota");
+    p.appendChild(input);
+    let submit = document.createElement("button");
+    submit.textContent = "submit";
+    form.appendChild(submit);
+    submit.setAttribute("type", "submit");
+    submit.addEventListener("click", nota);
+    let p2 = document.createElement("p");
+    article.appendChild(p2);
+    p2.setAttribute("id", "notaCalc");
+}
 function parImpar(){
     event.preventDefault();
     let input = document.querySelector("input");
@@ -327,6 +379,7 @@ function tarea1Ejercicio8(){
     let p = document.createElement("p");
     form.appendChild(p);
     let label = document.createElement("label");
+    label.innerText = "Di un numero"
     label.setAttribute("for", "numero");
     p.appendChild(label);
     let input = document.createElement("input");
@@ -346,6 +399,7 @@ function inversa(){
     event.preventDefault();
     let input = document.querySelector("input").value;
     let p = document.querySelector("#inversa");
+    p.textContent = "";
     let alreves = input.split("");
     for(let i = alreves.length - 1 ; i >= 0 ; i--){
         p.textContent += alreves[i];
@@ -363,6 +417,7 @@ function tarea1Ejercicio9(){
     let p = document.createElement("p");
     form.appendChild(p);
     let label = document.createElement("label");
+    label.innerText= "Escribe una palabra"
     label.setAttribute("for", "palabra");
     p.appendChild(label);
     let input = document.createElement("input");
@@ -377,4 +432,43 @@ function tarea1Ejercicio9(){
     let p2 = document.createElement("p");
     article.appendChild(p2);
     p2.setAttribute("id", "inversa");
+}
+function tarea1Ejercicio10(){
+    
+}
+function splitFrase(){
+    event.preventDefault();
+    let input = document.getElementById("frase").value;
+    let p = document.getElementById("cantidad");
+    let inputTrim = input.trim();
+    inputSplit = inputTrim.split(" ");
+    p.innerText = "La frase tiene " + inputSplit.length + " palabras";
+}
+function tarea2Ejercicio1(){
+    crearArticle();
+    let article = document.querySelector("article");
+    article.setAttribute("class", "ejercicios");
+    let h3 = document.createElement("h3");
+    article.appendChild(h3);
+    h3.textContent = "Tarea 2 Ejercicio 1";
+    let form = document.createElement("form");
+    article.appendChild(form);
+    let p = document.createElement("p");
+    form.appendChild(p);
+    let label = document.createElement("label");
+    label.innerText= "Escribe una frase"
+    label.setAttribute("for", "frase");
+    p.appendChild(label);
+    let input = document.createElement("input");
+    input.setAttribute("type", "text")
+    input.setAttribute("id","frase");
+    p.appendChild(input);
+    let submit = document.createElement("button");
+    submit.textContent = "submit";
+    form.appendChild(submit);
+    submit.setAttribute("type", "submit");
+    submit.addEventListener("click", splitFrase);
+    let p2 = document.createElement("p");
+    article.appendChild(p2);
+    p2.setAttribute("id", "cantidad");
 }
