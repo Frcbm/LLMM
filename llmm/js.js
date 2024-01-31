@@ -193,7 +193,7 @@ function tarea1Ejercicio4(){
     h3.textContent = "Tarea 1 Ejercicio 4";
 
     let form = document.createElement("form");
-    form.setAttribute("id", "ejercicio4");
+    form.setAttribute("class", "formularioPersona");
     article.appendChild(form);
 
     let p1 = document.createElement("p");
@@ -433,8 +433,69 @@ function tarea1Ejercicio9(){
     article.appendChild(p2);
     p2.setAttribute("id", "inversa");
 }
-function tarea1Ejercicio10(){
+function crearObjetoPersona(){
+    event.preventDefault();
+
+    let resultado = document.getElementById("resultado");
+    let name = document.getElementById("nombre");
+    let age = document.getElementById("edad");
+    let phone = document.getElementById("telefono");
+
+    let objetoPersona = {
+        nombre: name.value,
+        edad: age.value,
+        telefono: phone.value
+    }
+    resultado.innerText = "Nombre: " + objetoPersona.nombre + ". Edad: " + objetoPersona.edad + ". Teléfono: " + objetoPersona.telefono + "."
     
+}
+function tarea1Ejercicio10(){
+    crearArticle();
+    let article = document.querySelector("article");
+    article.setAttribute("class", "ejercicios");
+
+    let h3 = document.createElement("h3");
+    article.appendChild(h3);
+    h3.innerText = "Tarea 1 Ejercicio 10";
+
+    let form = document.createElement("form");
+    article.appendChild(form);
+    form.setAttribute("class", "formularioPersona");
+
+    let labelName = document.createElement("label");
+    labelName.setAttribute("for", "nombre");
+    form.appendChild(labelName);
+    labelName.innerText = "Nombre: ";
+    let inputName = document.createElement("input");
+    inputName.setAttribute("id", "nombre");
+    form.appendChild(inputName);
+
+    let labelAge = document.createElement("label");
+    labelAge.setAttribute("for", "edad");
+    form.appendChild(labelAge);
+    labelAge.innerText = "Edad: ";
+    let inputAge = document.createElement("input");
+    inputAge.setAttribute("id", "edad");
+    form.appendChild(inputAge);
+
+    let labelTelefono = document.createElement("label");
+    labelTelefono.setAttribute("for", "telefono");
+    form.appendChild(labelTelefono);
+    labelTelefono.innerText = "Teléfono: ";
+    let inputTelefono = document.createElement("input");
+    inputTelefono.setAttribute("id", "telefono");
+    form.appendChild(inputTelefono);
+    
+    let submit = document.createElement("button");
+    submit.setAttribute("type", "submit");
+    submit.innerText = "submit";
+    form.appendChild(submit);
+    submit.addEventListener("click", crearObjetoPersona);
+
+    let resultado = document.createElement("p");
+    resultado.setAttribute("id", "resultado");
+    article.appendChild(resultado);
+
 }
 function splitFrase(){
     event.preventDefault();
@@ -471,4 +532,363 @@ function tarea2Ejercicio1(){
     let p2 = document.createElement("p");
     article.appendChild(p2);
     p2.setAttribute("id", "cantidad");
+}
+function tarea2Ejercicio2(){
+    crearArticle();
+    let article = document.querySelector("article");
+    article.setAttribute("class", "ejercicios");
+    let h3 = document.createElement("h3");
+    article.appendChild(h3);
+
+    h3.innerText = "Tarea 2 Ejercicio 2"
+    let div = document.createElement("div");
+    div.setAttribute("id","piramide");
+    article.appendChild(div);
+    for(let i = 1; i <=5 ; i++){
+        let resultado = document.createElement("p");
+        div.appendChild(resultado);
+        for(let j = 0; j < i ; j++){
+            resultado.innerText += "*";
+        }
+    }
+}
+function numeroMenor(){
+    event.preventDefault();
+    let resultado = document.getElementById("resultado");
+    let numero1 = document.getElementById("numero1").value;
+    let numero2 = document.getElementById("numero2").value;
+    let numero3 = document.getElementById("numero3").value;
+    let menor = numero1 < numero2 ? numero1 < numero3 ? numero1 : numero3 : numero2 < numero3 ? numero2 : numero3;
+    resultado.innerText = "El número menor de entre los 3 es: " + menor;
+}
+function tarea2Ejercicio3(){
+    crearArticle();
+    let article = document.querySelector("article");
+    article.setAttribute("class", "ejercicios");
+
+    let h3 = document.createElement("h3");
+    h3.innerText = "Tarea 2 Ejercicio 3";
+    article.appendChild(h3);
+
+    let form = document.createElement("form");
+    article.appendChild(form);
+    form.setAttribute("class", "formularioPersona");
+
+    let labelNum1 = document.createElement("label");
+    labelNum1.setAttribute("for", "numero1");
+    form.appendChild(labelNum1);
+    labelNum1.innerText = "Primer Numero: ";
+    let inputNum1 = document.createElement("input");
+    inputNum1.setAttribute("id", "numero1");
+    form.appendChild(inputNum1);
+
+    let labelNum2 = document.createElement("label");
+    labelNum2.setAttribute("for", "numero2");
+    form.appendChild(labelNum2);
+    labelNum2.innerText = "Segundo Numero: ";
+    let inputNum2 = document.createElement("input");
+    inputNum2.setAttribute("id", "numero2");
+    form.appendChild(inputNum2);
+
+    let labelNum3 = document.createElement("label");
+    labelNum3.setAttribute("for", "numero3");
+    form.appendChild(labelNum3);
+    labelNum3.innerText = "Tercer Numero: ";
+    let inputNum3 = document.createElement("input");
+    inputNum3.setAttribute("id", "numero3");
+    form.appendChild(inputNum3);
+
+    let submit = document.createElement("button"); 
+    submit.setAttribute("type", "submit");
+    submit.addEventListener("click", numeroMenor)
+    submit.innerText = "submit"
+    form.appendChild(submit);
+
+    let resultado = document.createElement("p");
+    article.appendChild(resultado);
+    resultado.setAttribute("id", "resultado");
+}
+function mayusculaMinuscula(){
+    event.preventDefault();
+    let resultado = document.getElementById("resultado");
+    let palabra = document.getElementById("palabra").value;
+    resultado.innerText = "Mínuscula: " + palabra.toLowerCase() + " Mayúscula: " + palabra.toUpperCase();
+
+}
+function tarea2Ejercicio4(){
+    crearArticle();
+    let article = document.querySelector("article");
+    article.setAttribute("class", "ejercicios");
+
+    let h3 = document.createElement("h3");
+    article.appendChild(h3);
+    h3.innerText = "Tarea 2 Ejercicio 4";
+
+    let form = document.createElement("form");
+    article.appendChild(form);
+
+    let labelPalabra = document.createElement("label");
+    labelPalabra.setAttribute("for", "palabra");
+    form.appendChild(labelPalabra);
+    labelPalabra.innerText = "Palabra: ";
+    let inputPalabra = document.createElement("input");
+    inputPalabra.setAttribute("id", "palabra");
+    form.appendChild(inputPalabra);
+
+    let submit = document.createElement("button"); 
+    submit.setAttribute("type", "submit");
+    submit.addEventListener("click", mayusculaMinuscula)
+    submit.innerText = "submit"
+    form.appendChild(submit);
+
+    let resultado = document.createElement("p");
+    article.appendChild(resultado);
+    resultado.setAttribute("id", "resultado");
+}
+function factorial(){
+    event.preventDefault();
+    let resultado = document.getElementById("resultado");
+    let numero = document.getElementById("factorial").value;
+    let numeroFactorial = parseInt(1);
+    for(let i = 1 ;  i <= numero ; i++){
+        numeroFactorial *= i;
+    }
+    resultado.innerText = "El factorial de " + numero + " es " + numeroFactorial;
+}
+function tarea2Ejercicio5(){
+    crearArticle();
+    let article = document.querySelector("article");
+    article.setAttribute("class", "ejercicios");
+
+    let h3 = document.createElement("h3");
+    article.appendChild(h3);
+    h3.innerText = "Tarea 2 Ejercicio 5";
+
+    let form = document.createElement("form");
+    article.appendChild(form);
+
+    let labelNumero = document.createElement("label");
+    labelNumero.setAttribute("for", "factorial");
+    form.appendChild(labelNumero);
+    labelNumero.innerText = "Palabra: ";
+    let inputNumero = document.createElement("input");
+    inputNumero.setAttribute("id", "factorial");
+    inputNumero.setAttribute("type", "number")
+    form.appendChild(inputNumero);
+
+    let submit = document.createElement("button"); 
+    submit.setAttribute("type", "submit");
+    submit.addEventListener("click", factorial)
+    submit.innerText = "submit"
+    form.appendChild(submit);
+
+    let resultado = document.createElement("p");
+    article.appendChild(resultado);
+    resultado.setAttribute("id", "resultado");
+}
+function salarioEdad(){
+    event.preventDefault();
+    let resultado = document.getElementById("resultado");
+    let nombre = document.getElementById("nombre").value;
+    let salario = document.getElementById("salario").value;
+    salario = parseInt(salario);
+    let edad = document.getElementById("edad").value;
+    if(edad < 16){
+        resultado.innerText = "No puede trabajar con esa edad"
+    } else{
+        resultado.innerText = nombre + ", " + edad + " años. Cobra: "; 
+        if(salario < 1000){
+            if(edad < 30){
+                salario = 1100;
+                resultado.innerText +=  salario;
+            }else if(edad > 45){
+                salario = salario + salario * 0.03;
+                resultado.innerText +=  salario;
+            }else{
+                salario = salario + salario * 0.15;
+                resultado.innerText +=  salario;
+            }
+        } else if(salario > 2000){
+            resultado.innerText +=  salario;
+        }else{
+            if(edad < 45){
+                salario = salario + salario * 0.1;
+                resultado.innerText +=  salario;
+            }else{
+                salario = salario + salario * 0.03;
+                resultado.innerText +=  salario;
+            }
+        }
+
+    }
+}
+function tarea2Ejercicio6(){
+    crearArticle();
+    let article = document.querySelector("article");
+    article.setAttribute("class", "ejercicios");
+
+    let h3 = document.createElement("h3");
+    h3.innerText = "Tarea 2 Ejercicio 6";
+    article.appendChild(h3);
+
+    let form = document.createElement("form");
+    article.appendChild(form);
+    form.setAttribute("class", "formularioPersona");
+
+    let labelName = document.createElement("label");
+    labelName.setAttribute("for", "nombre");
+    form.appendChild(labelName);
+    labelName.innerText = "Nombre: ";
+    let inputName = document.createElement("input");
+    inputName.setAttribute("type", "text");
+    inputName.setAttribute("id", "nombre");
+    form.appendChild(inputName);
+
+    let labelWage = document.createElement("label");
+    labelWage.setAttribute("for", "salario");
+    form.appendChild(labelWage);
+    labelWage.innerText = "Salario: ";
+    let inputWage = document.createElement("input");
+    inputWage.setAttribute("id", "salario");
+    inputWage.setAttribute("type", "number");
+    form.appendChild(inputWage);
+
+    let labelAge = document.createElement("label");
+    labelAge.setAttribute("for", "edad");
+    form.appendChild(labelAge);
+    labelAge.innerText = "Edad: ";
+    let inputAge = document.createElement("input");
+    inputAge.setAttribute("type", "number");
+    inputAge.setAttribute("id", "edad");
+    form.appendChild(inputAge);
+
+    let submit = document.createElement("button"); 
+    submit.setAttribute("type", "submit");
+    submit.addEventListener("click", adivinaNumero);
+    submit.innerText = "submit";
+    form.appendChild(submit);
+
+    let resultado = document.createElement("p");
+    article.appendChild(resultado);
+    resultado.setAttribute("id", "resultado");
+}
+let numSecreto;
+function randomNumber(){
+    event.preventDefault();
+    numSecreto = parseInt(Math.floor(Math.random() * 100 + 1));
+}
+
+function adivinaNumero(){
+    event.preventDefault();
+
+    let resultado = document.getElementById("resultado");
+    let numero = parseInt(document.getElementById("numero").value);
+    let acierto = false;
+
+    if(Number.isNaN(numero)){
+        resultado.innerText = "No es un número válido";
+    }else if (numero > numSecreto){
+        resultado.innerText = "MENOS!";
+    } else if(numero < numSecreto){
+        resultado.innerText = "MÁS!";
+    } else{
+        acierto = true;
+    }
+    if(acierto){
+        resultado.innerText = "Has acertado!"
+    }
+    
+}
+function tarea2Ejercicio7(){
+    crearArticle();
+    let article = document.querySelector("article");
+    article.setAttribute("class", "ejercicios");
+
+    let h3 = document.createElement("h3");
+    article.appendChild(h3);
+    h3.innerText = "Tarea 2 Ejercicio 7";
+
+    let form = document.createElement("form");
+    article.appendChild(form);
+
+    let labelNumero = document.createElement("label");
+    labelNumero.setAttribute("for", "numero");
+    form.appendChild(labelNumero);
+    labelNumero.innerText = "Numero: ";
+    let inputNumero = document.createElement("input");
+    inputNumero.setAttribute("id", "numero");
+    inputNumero.setAttribute("type", "number")
+    form.appendChild(inputNumero);
+
+    let submit = document.createElement("button"); 
+    submit.setAttribute("type", "submit");
+    
+    submit.addEventListener("click", adivinaNumero)
+    submit.innerText = "submit"
+    form.appendChild(submit);
+    randomNumber();
+    let resultado = document.createElement("p");
+    article.appendChild(resultado);
+    resultado.setAttribute("id", "resultado");
+}
+let count = 0;
+function adivinaNumero2(){
+    event.preventDefault();
+    let resultado = document.getElementById("resultado");
+    let numero = parseInt(document.getElementById("numero").value);
+    let acierto = false;
+    if(Number.isNaN(numero)){
+        resultado.innerText = "No es un número válido";
+    }else if (numero > numSecreto){
+        count++;
+        resultado.innerText = "MENOS!";
+    } else if(numero < numSecreto){
+        count++;
+        resultado.innerText = "MÁS!";
+    } else{
+        count++;
+        acierto = true;
+    }
+    if(acierto){
+        count = 0;
+        resultado.innerText = "Has acertado!"
+        randomNumber();
+    }
+    if(count == 5){
+        resultado.innerText = "Se acabaron los intentos";
+        count = 0;
+        randomNumber();
+    }
+}
+function tarea2Ejercicio8(){
+    crearArticle();
+    let article = document.querySelector("article");
+    article.setAttribute("class", "ejercicios");
+
+    let h3 = document.createElement("h3");
+    article.appendChild(h3);
+    h3.innerText = "Tarea 2 Ejercicio 8";
+
+    let form = document.createElement("form");
+    article.appendChild(form);
+
+    let labelNumero = document.createElement("label");
+    labelNumero.setAttribute("for", "numero");
+    form.appendChild(labelNumero);
+    labelNumero.innerText = "Numero: ";
+    let inputNumero = document.createElement("input");
+    inputNumero.setAttribute("id", "numero");
+    inputNumero.setAttribute("type", "number")
+    form.appendChild(inputNumero);
+
+    let submit = document.createElement("button"); 
+    submit.setAttribute("type", "submit");
+    
+    submit.addEventListener("click", adivinaNumero2)
+    submit.innerText = "submit"
+    form.appendChild(submit);
+    randomNumber();
+    let resultado = document.createElement("p");
+    article.appendChild(resultado);
+    resultado.setAttribute("id", "resultado");
 }
