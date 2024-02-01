@@ -892,3 +892,49 @@ function tarea2Ejercicio8(){
     article.appendChild(resultado);
     resultado.setAttribute("id", "resultado");
 }
+
+function colorCuadrado(){
+    event.preventDefault();
+    let colores = "0123456789ABCDEF";
+    let etiqueta = "#";
+    let color = etiqueta;
+    for(let i = 0 ; i < 6 ; i++){
+        color += colores[parseInt(Math.floor(Math.random() * 16))];
+    }
+    return color;
+}
+function tarea2Ejercicio9(){
+    crearArticle();
+    let article = document.querySelector("article");
+    let h3 = document.createElement("h3");
+    article.setAttribute("id", "cuadrado");
+    article.appendChild(h3);
+    article.setAttribute("class", "ejercicios");
+    let cuadrado = document.getElementById("cuadrado");
+    h3.innerText = "Tarea 2 Ejercicio 9";
+
+    
+    cuadrado.style.backgroundColor = colorCuadrado();
+}
+function crear100(){
+    let article = document.querySelector("article");
+    for(let i = 0; i < 100 ; i++){
+        let div = document.createElement("div");
+        div.setAttribute("class", "colores");
+        div.setAttribute("id", "colorinchis" + i);
+        article.appendChild(div);
+    }
+    for(let i = 0 ; i < 100 ; i++){
+        let actDiv = document.getElementById("colorinchis" + i);
+        actDiv.style.backgroundColor = colorCuadrado();
+    }
+}
+function tarea2Ejercicio10(){
+    crearArticle();
+    let article = document.querySelector("article");
+    let h3 = document.createElement("h3");
+    article.appendChild(h3);
+    article.setAttribute("id", "ejercicio210");
+    h3.innerText = "Tarea 2 Ejercicio 10";
+    crear100();
+}
