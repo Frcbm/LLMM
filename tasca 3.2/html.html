@@ -6,7 +6,72 @@
     <link rel="stylesheet" href="css.css">
 </head>
 <body>
-    
+    <header>
+        <label for="ejercicio">Que ejercicio quieres mostrar</label>
+        <select id="ejercicio" onchange="mostrarContenido()">
+            <option selected>Elige un ejercicio que desplegar</option>
+            <option value="ejercicio1">Eliminar Duplicados</option>
+            <option value="ejercicio2">Calcular el precio del coche</option>
+            <option value="ejercicio3">Edad para hacer FP</option>
+            <option value="ejercicio4">Cantidad de links</option>
+            <option value="ejercicio5">Mostrar parrafos</option>
+            <option value="ejercicio6">Imágen</option>
+        </select>
+    </header>
+    <main>
+        <article id="ej1" class="ejercicios">
+            <p id="resultadoej1"></p>
+        </article>
+        <article id="ej2" class="ejercicios">
+            <form>
+                <label for="marca">De que marca es el coche</label>
+                <select name="marca" id="marca">
+                    <option>Ford</option>
+                    <option>Seat</option>
+                    <option>Citroen</option>
+                    <option>Audi</option>
+                </select>
+                <label for="precio">Escribe el precio del coche</label>
+                <input id="precio">
+                <button type="submit" onclick="calcularPrecio()">submit</button>
+            </form>
+            <div>
+                <p id="respuesta"></p>
+            </div>
+        </article>
+        <article id="ej3" class="ejercicios">
+            <form>
+                <label for="edad">Escribe tu edad</label>
+                <input id="edad">
+                <button type="submit" onclick="mayoriaDeEdad()">submit</button>
+                <div>
+                    <p id="respuestaej3"></p>
+                </div>
+            </form>
+        </article>
+        <article id="ej4" class="ejercicios">
+            <div>
+                <a href="html2.html">Ejercicio 4</a>
+            </div>
+        </article>
+        <article id="ej5" class="ejercicios">
+            <div>
+                <a href="html3.html">Ejercicio 5</a>
+            </div>
+        </article>
+        <article id="ej6" class="ejercicios">
+            <div>
+                <img id="imagen" src="imagen.jpg" alt="imagen de prueba" style="display: flex" >
+                
+            </div>
+            <div id="botonesFoto">
+                <button type="button" onclick="agrandar()">Agrandar</button>
+                <button type="button" onclick="reducir()">Reducir</button>
+                <button type="button" onclick="visibleInvisible()">Visible/Invisible</button>
+            </div>
+            
+        </article>
+    </main>
     <script src="js.js"></script>
 </body>
 </html>
