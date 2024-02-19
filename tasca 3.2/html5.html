@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <header>
+        <h1>Nuestros usuarios son deportistas</h1>
+    </header>
+    <main id="deportes">
+        <form id="formDeportes">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" required>
+            <label for="color1">Color camiseta 1:</label>
+            <input type="color" id="color1">
+            <label for="color2">Color Camiseta 2:</label>
+            <input type="color" id="color2">
+            <label for="deporte">Deporte:</label>
+            <select id="deporte" required>
+                <option selected>Elige un deporte</option>
+                <option value="futbol">Fútbol</option>
+                <option value="basket">Baloncesto</option>
+                <option value="tenis">Tenis</option>
+                <option value="atletismo">Atletismo</option>
+                <option value="boxeo">Boxeo</option>
+            </select>
+            <button type="submit" onclick="formularioDeportes(); resetForm()">submit</button>
+        </form>
+        <section id="futbol">
+            <h2>Fútbol</h2>
+        </section>
+        <section id="basket">
+            <h2>Baloncesto</h2>
+        </section>
+        <section id="tenis">
+            <h2>Tenis</h2>
+        </section>
+        <section id="atletismo">
+            <h2>Atletismo</h2>
+        </section>
+        <section id="boxeo">
+            <h2>Boxeo</h2>
+        </section>
+    </main>
+    <script src="js.js"></script>
+</body>
+</html>

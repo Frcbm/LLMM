@@ -10,15 +10,17 @@
         <label for="ejercicio">Que ejercicio quieres mostrar</label>
         <select id="ejercicio" onchange="mostrarContenido()">
             <option selected>Elige un ejercicio que desplegar</option>
-            <option value="ejercicio1">Eliminar Duplicados</option>
-            <option value="ejercicio2">Calcular el precio del coche</option>
-            <option value="ejercicio3">Edad para hacer FP</option>
-            <option value="ejercicio4">Cantidad de links</option>
-            <option value="ejercicio5">Mostrar parrafos</option>
-            <option value="ejercicio6">Imágen</option>
+            <option value="ejercicio1">Ejercicio 1</option>
+            <option value="ejercicio2">Ejercicio 2</option>
+            <option value="ejercicio3">Ejercicio 3</option>
+            <option value="ejercicio4">Ejercicio 4</option>
+            <option value="ejercicio5">Ejercicio 5</option>
+            <option value="ejercicio6">Ejercicio 6</option>
+            <option value="ejercicio7">Ejercicio 7</option>
+            <option value="ejercicio8">Ejercicio 8</option>
         </select>
     </header>
-    <main>
+    <main id="mainPrincipal">
         <article id="ej1" class="ejercicios">
             <p id="resultadoej1"></p>
         </article>
@@ -60,16 +62,22 @@
             </div>
         </article>
         <article id="ej6" class="ejercicios">
-            <div>
-                <img id="imagen" src="imagen.jpg" alt="imagen de prueba" style="display: flex" >
-                
-            </div>
             <div id="botonesFoto">
                 <button type="button" onclick="agrandar()">Agrandar</button>
                 <button type="button" onclick="reducir()">Reducir</button>
                 <button type="button" onclick="visibleInvisible()">Visible/Invisible</button>
             </div>
+            <div>
+                <img id="imagen" src="images/imagen.jpg" alt="imagen de prueba" style="display: flex; width: 200px; height:200px" >
+                
+            </div>
             
+        </article>
+        <article id="ej7" class="ejercicios">
+            <div><a href="html4.html">Ejercicio 7</a></div>
+        </article>
+        <article id="ej8" class="ejercicios">
+            <div><a href="html5.html">Ejercicio 8</a></div>
         </article>
     </main>
     <script src="js.js"></script>
