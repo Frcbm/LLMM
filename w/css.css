@@ -1,0 +1,142 @@
+*{
+    margin: 2px;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #0f0f0f; 
+    height: 100vh;
+    margin:0;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center ;
+    justify-content: space-between;
+    margin: 0;
+    width: 99.69%;
+    height:auto;
+    margin-bottom: 2;
+}
+a{
+    width: 10%;
+    height: auto;
+}
+a img{
+    width: 100%;
+    height: auto;
+}
+.parrafo{
+    padding: 2%;
+}
+.parrafo img{
+    width: 100%;
+}
+iframe{
+    width: 100%;
+}
+main{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+#enlaceCabecera{
+    width: 70%;
+    height: auto;
+}
+#cabecera{
+    width: 100%;
+    height: auto;
+}
+#intel{
+    width: 100%;
+    height: auto;
+}
+header, nav, #camiseta{
+    border: 4px solid #800080;
+    background-color: #D4AF37;
+}
+footer{
+    width: 99.7%;
+    text-align: center;
+}
+.parrafo, footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border:4px solid #D4AF37;
+    color: white;
+}
+article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: auto;
+} 
+iframe{
+    width: 80%;
+    height: auto;
+}
+h1{
+    color:#D4AF37; 
+}
+#camiseta{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 15%;
+    height: auto;
+    overflow: hidden;
+}
+#camiseta a{
+    width: 100%;
+    height: auto;
+}
+aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15%; 
+    height: auto;
+    text-align: center;
+    
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+
+@media screen and (min-device-width: 350px)and(max-device-width: 749px){
+    aside{
+        font-size: 20pt;
+    }
+    footer, .parrafo{
+        font-size: 45pt;
+    }
+}
+@media screen and (min-device-width: 750px)and(max-device-width: 1499px){
+    aside{
+        font-size: 14pt;
+    }
+    footer, .parrafo{
+        font-size: 20pt;
+    }
+}
+@media screen and(min-device-width: 1500px){
+    aside{
+        font-size: 18pt;
+    }
+    footer, .parrafo{
+        font-size: 25pt;
+    }
+}
