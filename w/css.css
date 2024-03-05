@@ -116,20 +116,20 @@ nav{
 }
 
 
-@media screen and (min-device-width: 350px)and(max-device-width: 749px){
+@media screen and (min-device-width: 350px){
     aside{
-        font-size: 20pt;
-    }
+        font-size: 13pt;
+    }       
     footer, .parrafo{
-        font-size: 45pt;
+        font-size: 30pt;
     }
 }
-@media screen and (min-device-width: 750px)and(max-device-width: 1499px){
+@media screen and (min-device-width: 750px){
     aside{
         font-size: 14pt;
     }
     footer, .parrafo{
-        font-size: 20pt;
+        font-size: 12pt;
     }
 }
 @media screen and(min-device-width: 1500px){
@@ -137,6 +137,6 @@ nav{
         font-size: 18pt;
     }
     footer, .parrafo{
-        font-size: 25pt;
+        font-size: 12pt;
     }
 }
