@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta author="Francesc Barbón Cursach, Francesc Sorà Quevedo">
-    <title>Camiseta</title>
+    <title>Index</title>
     <link rel="stylesheet" href="css.css">
 </head>
 <body onload="colorBody()">
-    <!--La principal funcionalidad de esta página es poder usarla en un futuro
-    para introducir un formulario web-->
     <header>
         <!--Cabecera de la página que incluye 3 imágenes-->
         <a href="Index.html"><img src="Contents/Imagenes/logo.jpg" alt="logo equipo" id="logo"></img></a>
@@ -18,7 +16,6 @@
     <a href="suscripcion.html"><button type="button">Hazte Socio</button></a>
     <button class="tema" onclick="cambiarTema()">Cambiar tema</button>
     <main>
-        
         <article class="movil">
             <aside >
             <!--Navegador de la página, con una lista de enlaces que nos permite
@@ -51,35 +48,45 @@
                 </ul>
             </nav>
         </aside>
-        <!--En esta ocasión no lo hemos introducido en un article porque es solo
-        un texto provisional y hemos considerado que no era necesario-->
-        <form class="parrafo" onsubmit="return validar()" method="post" id="formulario">
-            <label for="nom">Nom:</label><br>
-            <input id="nom" type="text"><br>
-            <label for="llin">Llinatges:</label><br>
-            <input id="llin" type="text"><br>
-            <label for="dir">Direcció d'enviament:</label><br>
-            <input id="dir" type="text"><br>
-            <label for="email">e-Mail:</label><br>
-            <input id="email" type="text"><br>
-            <label for="tlf">Teléfon:</label><br>
-            <input id="tlf" type="tel"><br>
-            <br>
-            <br>
-            <select id="tarjeta" onclick="pagament()"><br>
-                <option>Trii el métode de pagament</option>
-                <option value="visa">Visa</option>
-                <option value="mc">Master Card</option>
-                <option value="payp">Pay-Pal</option>
-                <option value="biz">Bizum</option>
-            </select>
-        </form><br>
+        <form class="parrafo" method="post" id="formulario" onsubmit="return validarDatos()">
+            <label for="nombre">Nombre: </label>
+            <input type="text" id="nombre"><br>
+            <label for="apellido">Apellido: </label>
+            <input type="text" id="apellido"><br>
+            <!--<label for="foto">Foto de carnet: </label>
+            <input type="file" id="foto" accept=".jpg, .jpeg, .png"><br>-->
+            <label for="suscripcion">Tipo de suscripción: </label>
+            <select id="suscripcion" required>
+                <option default>Elige tu suscripción</option>
+                <option value="Normal">Normal</option>
+                <option value="Colaborador">Colaborador</option>
+                <option value="Premium">Premium</option>
+            </select><br>
+            <label for="tarjeta">Tarjeta de crédito: </label>
+            <input type="text" id="tarjeta"><br>
+            <button type="button" onclick="if(validarDatos()) crearCarnet()">Enviar</button>
+        </form>
+        <article  class="carnet; parrafo" id="carnet">
+            <h3 id="tituloCarnet"></h3>
+            
+            <article id="informacionCarnet">
+                <article id="interiorCarnet">
+                    <img alt="logo club" src="Contents/Imagenes/logo.jpg">
+                </article>
+                <article class="lineasCarnet">
+                    <p id="name"></p>
+                    <p id="suscription"></p>
+                    <p id="identificador"></p>
+                </article>
+            </article>
+            
+        </article>
         <aside id="camiseta" class="ordenador">
             <!--A través de los siguientes enlaces iríamos a una páginas que de momento
             esta sin usar, pero que nos servirá a la hora de hacer formularios web-->
-                <a href="Camiseta.html"><p><b>¡¡Adquiere nuestra camiseta!!</b></p></a>
-                <a href="Camiseta.html"><img src="Contents/Imagenes/camiseta.png" alt="foto camiseta" id="cam"></a>
-            </aside>
+            <a href= "Camiseta.html"><p><b>¡¡Adquiere nuestra camiseta!!</b></p></a>
+            <a href = "Camiseta.html"><img src="Contents/Imagenes/camiseta.png" alt="foto camiseta" id="cam"></a>
+        </aside>
     </main>
     <footer>
         <!--El footer con nuestra información-->

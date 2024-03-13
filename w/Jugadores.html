@@ -6,15 +6,37 @@
     <title>jugadores</title>
     <link rel="stylesheet" href="css.css">
 </head>
-<body>
+<body onload="colorBody()">
     <header>
         <!--Cabecera de la página que incluye 3 imágenes-->
         <a href="Index.html"><img src="Contents/Imagenes/logo.jpg" alt="logo equipo" id="logo"></img></a>
         <a href ="Index.html" id="enlaceCabecera"><img src="Contents/Imagenes/Titulo.png" alt="cabecera equipo" id="cabecera"></a>
         <a href ="https://www.intel.la/content/www/xl/es/homepage.html"><img src="Contents/Imagenes/intel.png" alt="patrocinio intel" id="intel"></a>
     </header>
+    <a href="suscripcion.html"><button type="button">Hazte Socio</button></a>
+    <button class="tema" onclick="cambiarTema()">Cambiar tema</button>
     <main id="jug">
-        <aside>
+        <article class="movil">
+            <aside >
+            <!--Navegador de la página, con una lista de enlaces que nos permite
+            navegar por nuestra página-->
+            <nav>
+                <ul>
+                    <lh>Indice</lh>
+                    <li><a href="Index.html">Inicio</li></a>
+                    <li><a href="Sobre_nosotros.html">Sobre Nosotros</li></a>
+                    <li><a href="Jugadores.html">Jugadores</li></a>
+                </ul>
+            </nav>
+            </aside>
+            <aside id="camisetamovil">
+                <!--A través de los siguientes enlaces iríamos a una páginas que de momento
+                esta sin usar, pero que nos servirá a la hora de hacer formularios web-->
+                <a href= "Camiseta.html"><p><b>¡¡Adquiere nuestra camiseta!!</b></p></a>
+                <a href = "Camiseta.html"><img src="Contents/Imagenes/camiseta.png" alt="foto camiseta"></a>
+            </aside>
+        </article>
+        <aside class="ordenador">
             <!--Navegador de la página, con una lista de enlaces que nos permite
             navegar por nuestra página-->
             <nav>
@@ -27,27 +49,38 @@
             </nav>
         </aside>
         <!--Primer article-->
+        <button type="button" onclick="retroceder()">Anterior</button>
         <article class="parrafo">
-            <img src="Contents/Imagenes/cuervo_1.jpg" alt="Llorenç Corbet" class="fotos">
+            <img onmouseenter="mostrarText()" onmouseleave="ocultarText()" src="Contents/Imagenes/cuervo_1.jpg" alt="Llorenç Corbet" class="fotos">
             <p>Llorenç Corbet</p>
             <p>Caimari</p>
             <p>22 años</p>
+            <article class="oculto" style="visibility: hidden">
+                <p>Llorenç Corbet, natural de Caimari empezó a jugar a los 13 años, desde entonces se ha enfrentado a algunos de los mejores jugadores del pais mostrando de sobra que merece estar entre ellos.</p>
+            </article>
         </article>
         <!--Segundo article-->
-        <article class="parrafo" style="display:none">
+        <article onmouseenter="mostrarText()" onmouseleave="ocultarText()" class="parrafo" style="display:none">
             <img src="Contents/Imagenes/cuervo_2.jpg" alt="Miquela Alana Pou" class="fotos">
             <p>Miquela Alana Pou</p>
             <p>Ca's Concos de's Cavaller</p>
             <p>24 años</p>
+            <article class="oculto" style="visibility: hidden">
+                <p>Miquel Alana Pou nació en Ca's Concos de's Cavaller, su padre tenía unos terrenos y no solia jugar al ordenador, hasta que un dia descubrió su pasión por los videojuegos tras visitar a una amiga en Manacor. Desde entonces, no ha parado.</p>
+            </article>
         </article>
         <!--Tercer article-->
-        <article class="parrafo" style="display:none">
+        <article onmouseenter="mostrarText()" onmouseleave="ocultarText()" class="parrafo" style="display:none">
             <img src="Contents/Imagenes/cuervo_3.jpg" alt="Tomás Carronyer" class="fotos">
             <p>Tomás Carronyer</p>
             <p>Pina</p>
             <p>19 años</p>
+            <article class="oculto" style="visibility: hidden">
+                <p>Llorenç Corbet, natural de Caimari empezó a jugar a los 13 años, desde entonces se ha enfrentado a algunos de los mejores jugadores del pais mostrando de sobra que merece estar entre ellos.</p>
+            </article>
         </article>
-        <aside id="camiseta">
+        <button type="button" onclick="avanzar()">Siguiente</button>
+        <aside id="camiseta" class="ordenador">
             <!--A través de los siguientes enlaces iríamos a una páginas que de momento
             esta sin usar, pero que nos servirá a la hora de hacer formularios web-->
                 <a href="Camiseta.html"><p><b>¡¡Adquiere nuestra camiseta!!</b></p></a>
@@ -60,5 +93,6 @@
         <p>IFC 33-A</p>
         <p>Crow Gaming Intel e-Sports Club</p>
     </footer>
+    <script src="js.js"></script>
 </body>
 </html>
