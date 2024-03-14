@@ -13,9 +13,23 @@
         <a href ="Index.html" id="enlaceCabecera"><img src="Contents/Imagenes/Titulo.png" alt="cabecera equipo" id="cabecera"></a>
         <a href ="https://www.intel.la/content/www/xl/es/homepage.html"><img src="Contents/Imagenes/intel.png" alt="patrocinio intel" id="intel"></a>
     </header>
+    <!--Este formulario lo utilizamos para hacer una encuesta-->
+    <p class="encuesta">Puntua nuestra página</p>
+    <form class="encuesta">
+        <input type="checkbox" id="1estrella" onclick="desmarca()" value="1">1*
+        <input type="checkbox" id="2estrella" onclick="desmarca()" value="2">2*
+        <input type="checkbox" id="3estrella" onclick="desmarca()" value="3">3*
+        <input type="checkbox" id="4estrella" onclick="desmarca()" value="4">4*
+        <input type="checkbox" id="5estrella" onclick="desmarca()" value="5">5*
+        <button type="button" onclick="puntuaPagina()">Puntua</button>
+    </form>
+    <p class="encuesta" id="media"></p>
     <a href="suscripcion.html"><button type="button">Hazte Socio</button></a>
     <button class="tema" onclick="cambiarTema()">Cambiar tema</button>
     <main>
+        <!--Hemos duplicado los aside que nos muestran la información de la camiseta y 
+            el menu, porque 2 de ellos se encontraran a una posición o en otra, y solo se mostraran en 
+            según el tamaño de la pantalla-->
         <article class="movil">
             <aside >
             <!--Navegador de la página, con una lista de enlaces que nos permite
