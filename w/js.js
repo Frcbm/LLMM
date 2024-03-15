@@ -142,7 +142,11 @@ function mostrarText() {
     tooltip[i].style.visibility = "hidden";
 }
 
-
+/*Función que genera automáticamente un campo de pago y un botón
+para realizar el pago solo cuando se elige un método de pago. El campo
+que se genera y la información que se debe aportar cambian en función
+del método de pago elegido. Cuenta con una fución auxiliar reset que
+borra el elemento anterior si se cambia de método de pago*/
 function pagament(){    
     let opcio = document.getElementById("tarjeta").value;
     let form = document.getElementById("form");    
@@ -158,25 +162,25 @@ function pagament(){
     lbl.setAttribute("for","ele");    
     switch(opcio){
         case "visa":
-            lbl.textContent = "Numero de tarjeta: ";
+            lbl.textContent = "Número de tarjeta: ";
             form.appendChild(lbl);
             form.appendChild(nuevoElemento);
             form.appendChild(but);
             break;
         case "mc":
-            lbl.textContent = "Numero de tarjeta: ";
+            lbl.textContent = "Número de tarjeta: ";
             form.appendChild(lbl);
             form.appendChild(nuevoElemento);
             form.appendChild(but);
             break;
         case "payp":
-            lbl.textContent = "Correu electrònic: ";
+            lbl.textContent = "Correo electrónico: ";
             form.appendChild(lbl);
             form.appendChild(nuevoElemento);
             form.appendChild(but);
             break;
         case "biz":
-            lbl.textContent = "Número de telèfon: ";
+            lbl.textContent = "Número de teléfono: ";
             form.appendChild(lbl);
             form.appendChild(nuevoElemento);
             form.appendChild(but);
@@ -195,32 +199,32 @@ function validar(){
     let nom = document.getElementById("nom").value;
     nom = nom.toUpperCase();
     if(!/^[A-ZÁÉÍÓÚÀÈÒ][A-ZÁÉÍÓÚÀÈÒ ]+$/.test(nom)){
-        alert("Nom no vàlid");
+        alert("Nombre no válido");
         return false;
     }    
     let llin = document.getElementById("llin").value;
     llin = llin.toUpperCase();
     const patternLlin = !/^[A-ZÁÉÍÓÚÀÈÒ][A-ZÁÉÍÓÚÀÈÒ ]+$/;
     if(!llin.test(patternLlin)){
-        alert("Llinatges no vàlids");
+        alert("Apellidos no válidos");
         return false;
     }    
     let dir = document.getElementById("dir").value;
     const patternCall= /^(calle|avenida|carretera|plaza|paseo|camino)\s[A-Za-z0-9\s\.,#-]+$/;
     if(!dir.test(patternCall)){
-        alert("Direcció no vàlida");
+        alert("Dirección no válida");
         return false;
     }    
     let mail = document.getElementById("email").value;
     const patternMail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if(!mail.test(patternMail)){
-        alert("Direcció de correu electrònic no vàlida");
+        alert("Dirección de correo electrónico no válida");
         return false;
     }    
     let tlf = document.getElementById("tlf").value;
     const patternTlf = /^6[0-9]{8}$/;
     if(!tlf.test(patternTlf)){
-        alert("Telèfon no vàlid");
+        alert("Teléfono no válido");
         return false;
     }    
     return true;
@@ -307,9 +311,13 @@ function reducirFotos4(){
     foto.style.width= "20%";
     foto.style.height = "20%";
 }
+/*Variables globales auxiliares que se usarán para el cálculo de la media*/
 var media = 0;
 var count = 0;
 var acumulado = 0;
+/*Esta función recoge el valor de la checkbox marcada(solo puede haber una) 
+y al enviar la votación mediante el botón hace el cálculo de la média 
+de entre 1 y 5 y la muestra de forma dinámica en la web*/
 function puntuaPagina(){
     count++;
 
@@ -347,6 +355,8 @@ function puntuaPagina(){
 
         document.getElementById("media").textContent = media;
     }
+    /*Función que restringe al usuario la elección a solo un checkbox a la vez
+    (hay formas mas eficientes de hacerlo, pero ya que lo hice así lo dejo)*/
     function desmarca(){
         let checkbox1 = document.getElementById("1estrella");
         let checkbox2 = document.getElementById("2estrella");
