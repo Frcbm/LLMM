@@ -1,3 +1,4 @@
+/*Hemos rehecho el css de la página para que se adapte mejor el responsive*/
 body{
     display: flex;
     flex-direction: column;
@@ -5,6 +6,8 @@ body{
     height: 100vh;
     margin:0;
 }
+/*header hace referencia a la cabecera donde tenemos el logo del equipo,
+el nombre y el patrocinador*/
 header{
     display: flex;
     flex-direction: row;
@@ -35,6 +38,8 @@ iframe{
     width: 50%;
     min-height: 300px;
 }
+/*Main es el cuerpo, donde se encuentran los aside y los elementos, que
+suelen pertenecer a la clase parrafo*/
 main{
     height: 100%;
     display: flex;
@@ -111,6 +116,8 @@ nav{
     width: 100%;
     height: auto;
 }
+/*La siguientes lineas definen la estructura del carnet que se genera
+con el formulario de suscripcion*/
 #carnet{
     display: flex;
     justify-content: flex-start;
@@ -144,22 +151,23 @@ nav{
     height: auto;
     flex-direction: column;
 }
-.tema{
-    border-radius: 2%;
-    width: 10%;
-    align-self: flex-end;
-}
 #interiorCarnet img{
     padding:20px;
     width: 150px;
     height: 200px;
 }
+.tema{
+    width: 10%;
+    align-self: flex-end;
+}
+/*Las siguientes lineas definen los estilos del cuadrado con información 
+de la página jugadores que aparece al pasar el ratón por encima*/
 .oculto{
     background-color: hsla(180, 1%, 54%, 0.57);
     position: absolute;
-    
     color:white;
 }
+/*El siguiente apartado */
 #fotosEvento{
     display: flex;
     flex-direction: row;
