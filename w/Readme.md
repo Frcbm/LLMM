@@ -29,9 +29,9 @@ __Pagina web__
 &nbsp; &nbsp;     |-----__README.md__  
 
 
-## Tecnologies utilitzades
+## Tecnologías utilizadas
 
-para la realización de este proyecto se han utilizado las siguientes tecnologías:
+Para la realización de este proyecto se han utilizado las siguientes tecnologías:
 1. __VSCODE__: Visual Studio Code es un editor de codigo fuente personalizable desarrollado por Microsoft. Es compatible con varios lenguajes de programación, por cual cosa es la plataforma que hemos utilizado para realizar nuestro proyecto.
 2. __GitHub__: Se trata de una plataforma de desarrollo colaborativo basado en el sistema de control de versions _Git_. Se basa en la creación de repositorios para la gestión de proyectos. Para controlar la integridad del codigo se pueden crear ramas (branch) las cuales son "copias" de la original pero que pueden ser modificadas de forma independiente y una vez realiado el trabajo y testeado el codigo se pueden fusionar con la rama original para añadir los cambios de forma segura.
 
