@@ -23,42 +23,53 @@ __Pagina web__
 &nbsp; &nbsp;     |-----__Index.html__  
 &nbsp; &nbsp;     |-----__Jugadores.html__  
 &nbsp; &nbsp;     |-----__Sobre_nosotros.html__  
+&nbsp; &nbsp;     |-----__suscripcion.html__  
 &nbsp; &nbsp;     |-----__css.css__  
+&nbsp; &nbsp;     |-----__js.js__  
 &nbsp; &nbsp;     |-----__README.md__  
 
 
 ## Tecnologies utilitzades
 
 para la realización de este proyecto se han utilizado las siguientes tecnologías:
-1. __HTML5__: Html significa HyperText Markup Language y es un estandar que sirve para definir la estructura, el diseño y el contenido de una página web regulado por W3C. En concreto, HTML5 es la quinta revisión del lenguaje que incorpora mejoras de calidad de vida y legibilidad como son las etiquetas semánticas. La versión definitiva fue lanzada en Octubre de 2014. Uno de los problemas de esta versión fueron las nuevas etiquetas que los navegadores antiguos no reconocian, habiendo de actualizar-los para soportar-la.
-2. __CSS3__: CSS son las siglas para Cascade Style Sheet. Se trata de un lenguaje de diseño gráfico que utilizamos para dar estilos a las páginas escritas de forma estructurada con un lenguaje de marcado, en nuestro caso HTML. Funciona a bas ede aplica _reglas_ a los elementos del archivo HTML. Estas reglas se estructuran de arriba a abajo, es decir, se tiene que ir con cuidado a no definir reglas superpuestas. 
-3. __VSCODE__: Visual Studio Code es un editor de codigo fuente personalizable desarrollado por Microsoft. Es compatible con varios lenguajes de programación, por cual cosa es la plataforma que hemos utilizado para realizar nuestro proyecto.
-4. __GitHub__: Se trata de una plataforma de desarrollo colaborativo basado en el sistema de control de versions _Git_. Se basa en la creación de repositorios para la gestión de proyectos. Para controlar la integridad del codigo se pueden crear ramas (branch) las cuales son "copias" de la original pero que pueden ser modificadas de forma independiente y una vez realiado el trabajo y testeado el codigo se pueden fusionar con la rama original para añadir los cambios de forma segura.
+1. __VSCODE__: Visual Studio Code es un editor de codigo fuente personalizable desarrollado por Microsoft. Es compatible con varios lenguajes de programación, por cual cosa es la plataforma que hemos utilizado para realizar nuestro proyecto.
+2. __GitHub__: Se trata de una plataforma de desarrollo colaborativo basado en el sistema de control de versions _Git_. Se basa en la creación de repositorios para la gestión de proyectos. Para controlar la integridad del codigo se pueden crear ramas (branch) las cuales son "copias" de la original pero que pueden ser modificadas de forma independiente y una vez realiado el trabajo y testeado el codigo se pueden fusionar con la rama original para añadir los cambios de forma segura.
 
 ## Características de la web
 
 La web está basada en una página de un equipo de e-Sports (deportes electrónicos).  
-Consta de 4 páginas:  
-- Una pagina inicial des de la cual se pueden ver las últimas noticias del equipo  
-![Pagina_inicial](Contents/Imagenes/Inici.jpg)  
+Consta de 5 páginas:  
+- Una pagina inicial des de la cual se pueden ver las últimas noticias del equipo. Durante la evolución de la web se le han ido dotando de funcionalidades. 
+![Paginal_inicialF](Contents/Imagenes/inici_F.jpg)
 
-Como se puede ver en la imagen anterior a la izquierda se encuentra un menú de navegación desde el cual podemos acceder al resto de páginas de la web. De formar alternativa clicando sobre el logo del equipo que se encuentro en el encabezamiento podemos volver a la página inicial. A la derecha se ve el logo de una camiseta, si clicamos sobre el nos aparecera la página siguiente:   
+Como se puede ver en la imagen anterior a la izquierda se encuentra un menú de navegación desde el cual podemos acceder al resto de páginas de la web. De formar alternativa clicando sobre el logo del equipo que se encuentro en el encabezamiento podemos volver a la página inicial. En la esquina superior izquierda se encuentra la encuesta de satisfacción y el botón para hacerse socio y en la esquina derecha un botón para cambiar la web a un tema mas claro. Los botones a ambos lados de las noticias nos permiten ir navegando entre ellas de forma interactiva. 
+A la derecha se ve el logo de una camiseta, si clicamos sobre el nos aparecera la página siguiente:   
   
 - Página de venta de camisetas  
-![Proximament](Contents/Imagenes/camiseta.jpg) 
+
+![Proximament](Contents/Imagenes/camiseta_F.jpg) 
    
-Podemos observar en las capturas como tanto la cabecera, el pie de página, el menú de navegación y la camiseta son elementos fijos a la página, es decir, que aunque hagamos scroll estos elementos nunca desapareceran de la pantalla y siempre estaria disponibles para el usuario. Se podria decir que estos elementos componen el esqueleto de lo que es la página, ya que son comunes a toda ella. Otra característica del encabezamiento es que tiene un valor de prioridad z sobre el resto de elementos, por cual cosa cuando hacemos scroll los elementos del cuerpo de la página quedan por debajo y nunca la tapan, haciendo de esta mánera énfasis en que se trata de la estructura sobre la cual se encuadra y se sustentan el resto de contenidos. 
+ En esta página encontramos un formulario que debemos rellenar con nuestros datos para obtener la camiseta del equipo. Los campos del formulario están limitados mediante expresiones regulares. El resto de elementos como el botón de cambio de tema, la encuesta y el botón para hacerse socio se mantienen en todas la páginas de la web.
   
-- Página d'información (Sobre Nosotros)  
-![About Us](Contents/Imagenes/about_us.jpg)  
+- Página de información (Sobre Nosotros)  
+
+![About Us](Contents/Imagenes/about_usF.jpg)  
   
-Esta página contiene información sobre el equipo directivo y organizativo, así como contexto sobre la creación del equipo.
+Esta página contiene información sobre el equipo directivo y organizativo, así como contexto sobre la creación del equipo. Al igual que en la página de inicio cuenta con unos botones con los que ir pasando de una publicación a otra.
 
 - Página de jugadores del equipo  
   
-![Jugadors](Contents/Imagenes/jugadores.jpg "Imagen de la página de jugadores")  
+![Jugadors](Contents/Imagenes/jugadoresF.jpg "Imagen de la página de jugadores")  
 
-Para acabar, la última página contiene información sobre los jugadores del equipo  
+Esta página presenta la misma estructura y comportamiento que las páginas anteriores con el añadido que al pasar el cursor por encima de la imágenes de los jugadores una pestaña se muestra que amplía la información sobre el jugador en cuestión.
+
+- Resgistro de socios
+
+![Socios](Contents/Imagenes/socio.jpg "Imagen de la página de suscripcion") 
+
+En esta página se muestra un formulario con el que el usuario puede hacerse socio del club con lo que obtiene un carnet de socio con un número de socio y un estética diferente en función del nivel de suscripción que se elija (normal, colaborador o premium).
+
+![Carnet](Contents/Imagenes/carnet.jpg "Imagen del carnet de socio") 
   
 ## Evolución del proyecto  
 
@@ -73,20 +84,55 @@ Para acabar, la última página contiene información sobre los jugadores del eq
 3. __Versión 3.0__: En esta versión implementamos dos media queries fijas para dos anchuras de pantalla diferentes sin utilizar flexbox i rellenamos el contenido de las diferentes pàginas.
   
 ![Query_1](Contents/Imagenes/media_query_1.jpg "Primera media query")  
+
 ![Query_2](Contents/Imagenes/media_query_2.jpg "Segunda media query") 
+
 ![Version 3.0](Contents/Imagenes/Versio_3.0.jpg "Tercera version de la web") 
   
-4. __Versión 4.0__: Esta es la versión final pasando todo el contenido a flex y añadiendo media queries para otras dos resoluciones  
+4. __Versión 4.0__: En esta versión pasamos todo el contenido a flex y añadimos media queries para otras dos resoluciones  
   
 ![Flex](Contents/Imagenes/flex.jpg "Regla flex CSS")  
 ![QWuery_3](Contents/Imagenes/media_query_3.jpg "Media queries finales")  
+
+4. __Version 4.1__: Version actualizada en la que se ha mejorado el archivo css readaptando los contenidos y reubicando ciertos botones para que la distribución sea mas intuitiva para cada una de las resoluciones soportadas.
+
+Resolución de pantalla
+
+![NewFlex](Contents/Imagenes/nuvosBotonesG.jpg "Botones para resolucion pantalla")
+
+Resolución de dispositivo móvil
+
+![NewFlex2](Contents/Imagenes/nuevosBotonesP.jpg "Botones para resolucion móvil")
+
+5. __Version 5.0__: En esta última versión se han añadido los elementos que dotan de interactividad a la web con el usuario en forma de encuestas de satisfacción, formularios de registro de usuario, formularios de compra de merchandising o elementos estéticos interactivos como carruseles de imagenes o imagenes adaptativas.
+A continuación se indica la lista de mejoras añadidas:
+
+    - Botón de cambio de estilo: Se encuentra en la esquina superior derecha de la página. Al pulsarlo el fondo de la web pasa a ser mas claro. El color que se eligió no es el blanco ya que el gris combina mejor con la eleccion de colores original.
+
+    ![TemaClaro](Contents/Imagenes/temaClaro.jpg "Tema claro")
+
+    - Encuesta de satisfacción: Muestra una media de la puntuación de 1 a 5 que nos da la gente que visita la web
+
+     ![stats](Contents/Imagenes/encuesta.jpg "Tema claro")
+
+    - Carrusel de imágenes: Tanto las noticias de la página principal como los artículos de "sobre nosotros" han cambiado pasando de ser estáticos a mostrarse de uno en uno y pudiendo pasar entre ellos mediante dos botones que permiten ir a la siguiente noticia y volver a la anterior
+
+    ![stats](Contents/Imagenes/botones.jpg "Tema claro")
+
+    - Botón de suscripción: En la esquina superior izquierda se encuentra el botón que nos redirige a la página de suscripción donde mediante un formulario el usuario puede registrarse como socio.
+
+    - Página de compra: Se ha ampliado la funcionalidad de la págida de compra de camisetas mediante un formulario el usuario puede comprar una camiseta del equipo a traves de varias plataformas de pago.
+
+    (Estos 2 últimos puntos ya cuentan con imágenes en la sección de características)
   
 
 ## Repartición de tareas  
   
-El trabajo realizado por cada uno se ve reflejado en esta tabla de excel que tambien añadiremos al repositiorio  
+El trabajo realizado por cada uno se ve reflejado en esta tabla de excel que tambien añadiremos al repositiorio.
+
+Refleja el trabajo total realizado desde el inicio del proyecto 
   
-![Trabajo](Contents/Imagenes/trabajo.jpg "Trabajo inidvidual")  
+![Trabajo](Contents/Imagenes/trabajo_realizado.jpg "Trabajo inidvidual")  
 
   
 
