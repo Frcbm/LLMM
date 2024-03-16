@@ -39,7 +39,7 @@ Para la realización de este proyecto se han utilizado las siguientes tecnologí
 
 La web está basada en una página de un equipo de e-Sports (deportes electrónicos).  
 Consta de 5 páginas:  
-- Una pagina inicial des de la cual se pueden ver las últimas noticias del equipo. Durante la evolución de la web se le han ido dotando de funcionalidades. 
+- Una pagina inicial des de la cual se pueden ver las últimas noticias del equipo. Durante la evolución de la web se le ha ido dotando de funcionalidades. 
 ![Paginal_inicialF](Contents/Imagenes/inici_F.jpg)
 
 Como se puede ver en la imagen anterior a la izquierda se encuentra un menú de navegación desde el cual podemos acceder al resto de páginas de la web. De formar alternativa clicando sobre el logo del equipo que se encuentro en el encabezamiento podemos volver a la página inicial. En la esquina superior izquierda se encuentra la encuesta de satisfacción y el botón para hacerse socio y en la esquina derecha un botón para cambiar la web a un tema mas claro. Los botones a ambos lados de las noticias nos permiten ir navegando entre ellas de forma interactiva. 
